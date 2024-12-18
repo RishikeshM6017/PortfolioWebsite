@@ -1,33 +1,167 @@
+:root {
+  --bg-color: rgb(20, 20, 20);
+  --black:  rgb();
+  --white:  rgb();
+  --violet: rgb(103, 58, 183);
+  --purple: rgb(123, 31, 162);
+  --indigo: rgb();
+  --blue:   rgb();
+  --green:  rgb();
+  --yellow: rgb();
+  --orange: rgb();
+  --red:    rgb();
+  --pink:   rgb(244, 143, 177);
+}
 
 * {
-    margin: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2em, 2vw, 4em);
+    font-weight: 400;
+}
+
+h1>.magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet), 
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 90%;
-    margin-inline: auto;
+  background-color: var(--bg-color);
 }
 
-img {
-    max-width: 100%;
-    display: block;
+nav {
+    width: 10vw;
+    height: 10vh;
+}
+
+header {
+    width: 90vw;
+    height: 90vh;
+}
+
+section {
     margin: auto;
+  width: calc(100vw - 20px);
+  height: calc(100vh - 20px);
+  overflow: hidden;
 }
 
-.card-carousel {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1rem;
-    margin-top: 5rem;
+#hover-card-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card {
-    border: 1 px solid #ccc;
-    border-radius: 1%;
-    padding: 2rem;
-    text-align: center;
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 3;
+.hover-card-container {
+    position: absolute;
+    display: flex;
+    max-width: 916px;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+}
+
+.hover-card {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 260px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.hover-card::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    content: "";
+    transition: opacity 500ms;
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.hover-card::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    content: "";
+    transition: opacity 500ms;
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y), 
+      rgba(255, 255, 255, 0.4),
+      transparent 40%
+    );
+    z-index: 1;
+}
+
+.hover-card:hover::before {
+    opacity: 1;
+}
+
+.hover-card-container:hover > .hover-card::after {
+    opacity: 1;
+}
+
+.hover-card>.hover-card-content {
+    position: absolute;
+    display: flex;
+    border-radius: inherit;
+    inset: 1px;
+    padding: 10px;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: rgb(23, 23, 23);
+    z-index: 2;
+}
+
+#magic-text-section {
+    margin: auto;
+    padding: auto;
+    align-content: center;
+}
+
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+    
 }
