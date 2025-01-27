@@ -1,2 +1,0 @@
-
-[[Empathy in Games]]

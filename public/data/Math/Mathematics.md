@@ -1,3 +1,0 @@
-[[Geometry]]
-[[Algebra]]
-[[Graph Theory]]
