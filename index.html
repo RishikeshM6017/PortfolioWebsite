@@ -1,208 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js"></script>
+        <title>Portfolio | Rishikesh M</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Prtfolio website of Rishikesh M" />
-    <title>Portfolio | Rishikesh</title>
+    <body>
+        <header role="banner">
+            <h1>Portfolio</h1>
 
-    <link rel="stylesheet" href="style.css" />
-
-    <script defer src="app.js"></script>
-</head>
-
-<body>
-    <header id="header">
-        <h1>Portfolio | Rishikesh M</h1>
-
+            <a href="#">About</a>
+            <a href="pages/blog.html">Blog</a>
+            <a href="pages/contact.html">Contact</a>
+        </header>
+        
         <nav>
-            <ul class="nav-links">
-                <li>
-                    <a href="#hero">About Me</a>
-                </li>
-                <li>
-                    <a href="#art">Art</a>
-                </li>
-                <li>
-                    <a href="#development">Development</a>
-                </li>
-                <li>
-                    <a href="#footer">Contact</a>
-                </li>
+            <ul>
+                <li><a href="#about-section">About Me</a></li>
+                <li><a href="#art-section">Art</a></li>
+                <li><a href="#games-section">Games</a></li>
+                <li><a href="#software-section">Software</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
-    </header>
+        
+        <main>
+            <section id="hero-section">
 
-    <main>
-        <section id="hero">
-            <div class="section-header">
-                <h2>Hi!</h2>
-                <div id="about-me">
-                    <p>
-                        My name is Rishikesh M, and I am an aspiring game dev and 3d artist
-                        from India
-                    </p>
-                    <br />
-                    <p>
-                        I am currently completing my Bachelor's degree in Computer Science<br>
-                        and aspire to enroll in a Master's program to further enhance my<br>
-                        knowledge and gain advanced expertise in the field
-                    </p>
-                    <br />
-                    <p>The following are some of my works :</p>
+            </section>
+
+            <section id="about-section">
+                <article id="about-me">
+                    <h1>Rishikesh M</h1>
+                    <h2>Game Developer | 3D Generalist</h2>
+                    <p>Hello, I am a Game Developer / 3D Artist based in Kerala, India</p>
+                </article>
+            </section>
+
+            <section id="art-section" aria-label="3D Art">
+                <header class="section-header">
+                    <h1>3D Art</h1>
+                    <h2>Here are some of my works in 3D and technical art</h2>
+                </header>
+
+                <div>
+                    <article></article>
+
+                    <article></article>
+
+                    <article></article>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="art">
-            <div class="section-header" id="art-header">
-                <h2>Art</h2>
-            </div>
+            <section id="games-section" aria-label="Game Development">
+                <header class="section-header">
+                    <h1>Game Development</h1>
+                    <h2>Here are some of my works in Game Design and Development</h2>
+                </header>
 
-            <div class="section-page" id="3d-models">
-                <h3>3D Modeling</h3>
-                <div class="card-container">
-                    <div class="card" id="buggy">
-                        <img src="assets/images/Buggy_A.png" alt="Buggy" />
-                        <img src="assets/images/Buggy_N.png" alt="Buggy Normal View" />
-                        <img src="assets/images/Buggy_W.png" alt="Buggy Wireframe View" />
-                    </div>
-                    <h4>Buggy</h4>
-                    <div class="card" id="grenade_launcher">
-                        <img src="assets/images/GrenadeLauncher_A.png" alt="GrenadeLauncher" />
-                        <img src="assets/images/GrenadeLauncher_N.png" alt="GrenadeLauncher Normal View" />
-                        <img src="assets/images/GrenadeLauncher_W.png" alt="GrenadeLauncher Wireframe View" />
-                    </div>
-                    <h4>Grenade Launcher</h4>
+                <div>
+                    <article></article>
+
+                    <article></article>
+
+                    <article></article>
                 </div>
-            </div>
+            </section>
 
-            <div class="section-page" id="materials">
-                <h3>Procedural Shaders and Materials</h3>
-                <div class="card-container">
-                    <div class="card">
-                        <img src="assets/images/Marble.png" alt="Marble Material" />
-                        <img src="assets/images/Rubber.png" alt="Rubber Material" />
-                        <img src="assets/images/Toon.png" alt="Toon Material" />
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/Granite.png" alt="Granite Material" />
-                        <img src="assets/images/Glitter.png" alt="Glitter Material" />
-                        <img src="assets/images/Leather.png" alt="Leather Material" />
-                    </div>
+            <section id="software-section" aria-label="Software Development">
+                <header class="section-header">
+                    <h1>Game Development</h1>
+                    <h2>Here is some sofware I developed</h2>
+                </header>
+
+                <div>
+                    <article></article>
+
+                    <article></article>
+
+                    <article></article>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <section id="development">
-            <div class="section-header" id="development-header">
-                <h2>Development</h2>
-            </div>
-
-            <div class="section-page" id="sandbox">
-                <h3>Game Development Sandbox</h3>
-                <h4>(W.I.P)</h4>
-                <p>
-                    A sandbox of various game mechanics and dynamics, to be used as reference.<br>
-                    Include charcter controllers, Vehicle controllers, and various other mechanics in 2D and 3D<br>
-                    Implemented in Godot, Unity and Unreal
-                </p>
-                <a href="https://github.com/RishikeshM6017/LearningGames">Github link</a>
-            </div>
-
-            <div class="section-page" id="vulkan-renderer">
-                <h3>Vulkan Renderer</h3>
-                <h4>(W.I.P)</h4>
-                <p>
-                    Hobby realtime renderer made using the Vulkan API and GLFW library.
-                </p>
-                <a href="https://github.com/RishikeshM6017/LearningGraphics">Github link</a>
-            </div>
-
-            <div class="section-page" id="theia-game-engine">
-                <h3>Theia Game Engine</h3>
-                <h4>(W.I.P)</h4>
-                <p>
-                    Game engine made using C/C++ and DirectX 12.<br>
-                    Features an Entity Component System (ECS), AI frameworks (State Machines, Behaviour Trees, Goal Oriented Action Planning) and a modern renderer
-                </p>
-                <a href="https://github.com/RishikeshM6017/TheiaEngine">Github link</a>
-            </div>
-        </section>
-
-        <section id="resume">
-            <div class="section-page" id="resume-page">
-                <div class="card-container">
-                    <div class="card" id="skills">
-                        <h3>Skills</h3>
-                        <ul>
-                            <li>
-                                <h4>Programming</h4>
-                                <h5>Proficient in C/C++, C#, Python</h5>
-                            </li>
-                            <li>
-                                <h4>Game Development</h4>
-                                <h5>Proficient in Unreal Engine, Unity and Godot</h5>
-                            </li>
-                            <li>
-                                <h4>Tools, Frameworks and APIs</h4>
-                                <h5>Vulkan</h5>
-                                <h5>DirectX</h5>
-                                <h5>WPF</h5>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card" id="education">
-                        <h3>Education</h3>
-                        <ul>
-                            <li>
-                                <h4>
-                                    Bachelor of Technology in Computer Science with
-                                    Specialization in Gaming technology
-                                </h4>
-                                <h5>Vellore Institute of Technology, Bhopal Campus, India</h5>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card" id="languages">
-                        <h3>Languages</h3>
-                        <h4>Proficient in English and Malayalam</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="footer">
-        <h3>Contact</h3>
-        <address>
-            <ul>
-                <li id="email">
-                    <a href="mailto:rishikesh7016@gmail.com" mail-to><span>Email: </span>rishikesh7016@gmail.com</a>
-                </li>
-                <li id="phone">
-                    <a href="tel: +91 8301053230"><span>Phone: </span>+91 8301053230</a>
-                </li>
-                <li id="github">
-                    <a href="https://github.com/RishikeshM6017">
-                        <span>Github</span>
-                    </a>
-                </li>
-                <li id="linkedin">
-                    <a href="https://www.linkedin.com/in/rishikesh-m-b52934245/">
-                        <span>LinkedIn</span>
-                    </a>
-                </li>
-            </ul>
-        </address>
-
-        <small>
-            Copyright © 2025 Rishikesh M. All Rights Reserved.
-        </small>
-    </footer>
-</body>
-
+        <footer id="contact-section">
+            <h1><a href="pages/contact.html">Contact</a></h1>
+            <address>
+                Email: <a href="mailto:rishikesh7016@gmail.com">rishikesh7016@gmail.com</a><br>
+                Phone: <a href="tel:+918301053230">+91 8301053230</a>
+            </address>
+        </footer>
+    </body>
 </html>
